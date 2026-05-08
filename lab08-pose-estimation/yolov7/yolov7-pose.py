@@ -83,9 +83,9 @@ ret, frame = cap.read()
 h, w, _ = frame.shape
 
 # May need to change the w, h as letterbox function reshapes the image.
-#out = cv2.VideoWriter('./' + file_name + '_yolov7', 
-#                       cv2.VideoWriter_fourcc(*'mp4v'), 
-#                       fps, (w, h))
+out = cv2.VideoWriter('./' + file_name + '_yolov7', 
+                       cv2.VideoWriter_fourcc(*'mp4v'), 
+                       fps, (w, h))
 
 out = cv2.VideoWriter("walking_yolo7.avi",cv2.VideoWriter_fourcc('M','J','P','G'), 10, (w, h))
 
