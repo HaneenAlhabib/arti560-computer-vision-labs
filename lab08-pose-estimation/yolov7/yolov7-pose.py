@@ -74,8 +74,8 @@ videos = [
         'skydiving',
         'far-away']
 
-file_name = videos[0] + '.mp4'
-vid_path = '../media/' + file_name
+file_name ='walking'
+vid_path = '../media/walking-persons.mp4'
 
 cap = cv2.VideoCapture(vid_path)
 fps = int(cap.get(cv2.CAP_PROP_FPS))
@@ -87,7 +87,7 @@ h, w, _ = frame.shape
 #                       cv2.VideoWriter_fourcc(*'mp4v'), 
 #                       fps, (w, h))
 
-out = cv2.VideoWriter(f"{save_name}_yolo7.avi",cv2.VideoWriter_fourcc('M','J','P','G'), 10, w,h)
+out = cv2.VideoWriter("walking_yolo7.avi",cv2.VideoWriter_fourcc('M','J','P','G'), 10, (w, h))
 
 #-------------------------------------------------------------------------------#
 
